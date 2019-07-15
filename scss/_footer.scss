@@ -1,0 +1,34 @@
+footer {
+    text-align: left;
+    color: $secondary;
+    background-color: $primary;
+    padding: 2em 0;
+    .container{
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 0;
+        float: left;
+        }
+
+    ul.list-social {
+        margin-bottom: 0;
+        float:right;
+        li {
+            a {
+                font-size: 1.5em;
+                display: block;
+                width: 1.5em;
+                height: 1.5em;
+                color: white;
+              }
+  
+            }
+        }
+    }

@@ -1,0 +1,231 @@
+//well this was fun
+
+// Variables
+$primary:    #223047;
+$secondary:  #00fff0;
+$tertiary:   #323a4d;
+$gray:       #97a4be;
+$lightgray:       #f5f6fa;
+
+@import "mixins.scss";
+@import "navbar.scss";
+@import "masthead.scss";
+@import "footer.scss";
+
+
+// Global styling
+html,
+body {
+    width: 100%;
+    height: 100%;
+    color: $primary;
+}
+
+body {
+    @include body-font;
+}
+
+a.btn {
+    color: $primary;
+}
+
+.btn-outline {
+    color: white!important;
+    border: 1px solid;
+    border-color: white;
+    background: transparent;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: $primary!important;
+        background:white!important;
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading-font;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    font-weight:100;
+
+    &.gray-text {color: $gray!important;}
+}
+
+.row {align-items: center}
+section {
+    padding: 3em 0;
+    h2 {
+        font-size: 2em;
+    }
+}
+
+.bg-primary {
+    background: $primary;
+}
+
+.bg-tertiary {
+    background: $tertiary;
+}
+
+.text-primary {
+    color: $primary;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.cta-content {
+    padding:2em 0 6em;
+    p {margin:2em 0 4em;
+    }
+}
+
+
+#features{
+    padding: 14em 0 9em;
+    h2 {
+    max-width: 500px;
+    margin: 0 auto 2em
+    }
+}
+.card {
+    border:none;
+    img {align-self: center}
+    @media (max-width: 991px){
+        margin: 2em auto;
+        max-width: 300px;
+    }
+}
+.card-title {margin: 1.25rem;}
+.card-text {font-size: .75em;color: $gray;}
+hr {
+    max-width: 100px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid $secondary;
+    margin: 6em auto;
+    padding: 0;
+}
+
+#get_more {
+    padding: 0;
+    background:$lightgray;
+    .bg-tertiary {
+        min-height: 600px;
+        @media (max-width: 991px){display: none}
+    }
+    p {
+        margin: 2em 0;
+    }
+    @media (max-width: 991px){
+        .section-heading {
+         margin: 0 auto;
+        }
+        .get-more-info {
+        text-align: center;
+        padding: 6em 0;
+    }
+    }
+    
+}
+
+#get_more .section-heading {
+    max-width: 500px;
+}
+
+.btn.glow{
+background: $secondary;
+    border-radius: 0;
+    box-shadow: rgba(0, 255, 240, 0.4) 0px 8px 24px 4px;
+    text-transform: capitalize;
+    font-weight: 100;
+    padding: 1rem 2rem;
+}
+
+#now_available {
+    background: $lightgray;
+    @media (max-width: 991px){padding: 8em 0;}
+    .row {
+    justify-content: center;
+    position:relative;
+    }
+    .btn {
+        position: absolute;
+        bottom: -75px;
+        @media (max-width: 991px){
+            bottom: -155px;
+        }
+    }
+}
+
+a.badge-link:first-child {
+    margin-right: 1em;
+}
+
+a.badge-link {
+    display: inline-block;
+}
+
+#contact {
+    padding: 8em 0;
+    p {
+    margin-bottom: 4em;
+    @media (max-width: 991px){
+        margin: 2em 0;
+    }
+    }
+}
+
+#testimonial p {
+    color: $secondary;
+    max-width: 700px;
+    margin: 2em auto
+}
+
+input[type=text]{
+    background:$lightgray;
+    width: 100%;
+    padding: .75rem;
+    border: none;
+}
+
+form {
+
+    @media (min-width: 576px){
+        &.form-inline {
+
+        max-width: 750px;
+        justify-content: center;
+        margin: 0 auto;
+
+        .form-group {
+            width: 75%;
+            @media (max-width: 767px){
+                width:100%;
+                margin: 2em 0;
+            }
+        }
+        .btn-primary.glow {
+                padding: .75rem 1.5rem;
+                border: none;
+                margin-left: 1em;
+                color: $primary;
+            }
+    }
+ }
+}
